@@ -11,6 +11,7 @@ const getStoreReadList = ()=> {
     }
 }
 
+
 const addToStorageReadList = (id)=> {
     const storageList = getStoreReadList();
     if(storageList.includes(id)){
@@ -36,7 +37,7 @@ const getStoreWishList = ()=> {
 }
 
 const addToStorageWishList = (id)=> {
-    const storageList = getStoreReadList();
+    const storageList = getStoreWishList();
     if(storageList.includes(id)){
         console.log(id, 'id already exists in the Read List');
     }
@@ -47,4 +48,4 @@ const addToStorageWishList = (id)=> {
     }
 }
 
-export {addToStorageReadList, addToStorageWishList}
+export {addToStorageReadList, addToStorageWishList, getStoreReadList, getStoreWishList}
